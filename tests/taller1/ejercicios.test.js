@@ -1,4 +1,4 @@
-import { punto1 } from "../../taller1/punto1";
+import { punto1 } from "../../taller1/ejercicios";
 
 describe('test punto 1', () => { 
     test('el resultado esperado: número mayor o menor a 3.9', () => { 
