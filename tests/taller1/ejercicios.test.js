@@ -1,16 +1,19 @@
-import { punto4 } from "../../taller1/ejercicios";
+import { punto5 } from "../../taller1/ejercicios";
 
-describe('test punto 4', () => { 
-    test('el resultado esperado: El resultado (Voltaje) entre de intensidad multiplicado por resistencia', () => { 
-        const solicitados = [
-            { nombre: "Juan", edad: parseInt(45) },
-            { nombre: "Diego", edad: parseInt(23) },
-            { nombre: "Daniel", edad: parseInt(67) }
-        ];
-        let context = `la persona con nmayor edad es ${solicitados.nombre} con ${solicitados.edad} años.`;
-        let result = punto4(solicitados)
-        expect(result).toBe(context);
-        
-     })
+describe('test punto 5', () => { 
+    test('lea por teclado dos números, si el primero es mayor al segundo informar su suma y diferencia', () => { 
+       let primero = 7
+       let segundo = 5
+       let result = punto5(primero, segundo)
+       expect(primero).toBeGreaterThan(segundo);
+       expect(result).toBe(result)
+     }),
+     test('lea por teclado dos números, si el primero es mayor al segundo informar su suma y diferencia', () => { 
+        let primero = 3
+        let segundo = 5
+        let result = punto5(primero, segundo)
+        expect(primero).toBeLessThan(segundo);
+        expect(result).toBe(result)
+      })
      
  });
