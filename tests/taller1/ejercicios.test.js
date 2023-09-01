@@ -1,13 +1,21 @@
-import { punto1 } from "../../taller1/ejercicios";
+import { punto2 } from "../../taller1/ejercicios";
 
-describe('test punto 1', () => { 
-    test('el resultado esperado: número mayor o menor a 3.9', () => { 
-        const resultado = punto1(3.0, 4.0, 2.0);
-        expect(resultado).toBe("Becado, el resultado de la suma es: 9, sacó más de 3.9");
+describe('test punto 2', () => { 
+    test('el resultado esperado: indicar si el numero es par o impar', () => { 
+        const number = punto2(11);
+        expect(number).toBe("El número es impar y mayor que 10");
      }),
-
-     test('el resultado no debe ser indefinido', () => { 
-        const resultado = punto1(3.0, 4.0, 2.5);
-        expect(resultado).not.toBeUndefined();
+     test('el resultado esperado: indicar si el numero es par o impar y si es mayor de 10', () => { 
+        const number = punto2(9);
+        expect(number).toBe("El número es impar y menor o igual a 10");
+     }),
+     test('el resultado esperado: indicar si el numero es par o impar y si es mayor de 10', () => { 
+        const number = punto2(12);
+        expect(number).toBe("El número es par y mayor que 10");
+     }),
+     test('el resultado esperado: indicar si el numero es par o impar y si es mayor de 10', () => { 
+        const number = punto2(6);
+        expect(number).toBe("El número es par y menor o igual a 10");
      })
+     
  });
