@@ -3,24 +3,21 @@
 // diferencia, en caso contrario, informar el producto y la
 // división del primero respecto al segundo.
 
-export const punto5 =(num1, num2)=>{
-  let primero = parseInt(num1)
-  let segundo = parseInt(num2)
-
-  let result=""
-  let Suma = parseFloat(primero) + parseFloat(segundo)
-  let Resta= parseFloat(primero) - parseFloat(segundo)
-  let Producto = parseFloat(primero) * parseFloat(segundo)
-  let División = parseFloat(primero) / parseFloat(segundo)
-
-  if (num1 > num2) {
-    result = "la suma de estos dos numeros es: " + Suma,". Y la resta de estos dos números es: " + Resta
-  } else {
-    result = "El producto de estos dos numeros es: " + Producto,". " + "Y la división de estos dos números es: " + División
+export const punto6 = (estudiantes) => {
+  let nombreM, nombrem, notaM = -Infinity, notai = Infinity, sexoF = 0, sexoM = 0;
+let text = ""
+  for (const estudiante of estudiantes) {
+    const { nombre, nota, sexo } = estudiante;
+    
+    if (nota > notaM) { notaM = nota; nombreM = nombre; }
+    if (nota < notai) { notai = nota; nombrem = nombre; }
+    if (sexo === "F") sexoF++;
+    else if (sexo === "M") sexoM++;
   }
-  return result;
-}
+  text =`El estudiante con mayor nota fue ${nombreM} con nota ${notaM}- El estudiante con menor nota fue ${nombrem} con nota ${notai}`
+return text;
 
+}
 
 
 
