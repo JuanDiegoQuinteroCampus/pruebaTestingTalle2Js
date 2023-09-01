@@ -1,32 +1,24 @@
-// 4. Construir el algoritmo que solicite el nombre y edad de 3
-// personas y determine el nombre de la persona con mayor edad.
+// 5. Construir el algoritmo que lea por teclado dos números,
+// si el primero es mayor al segundo informar su suma y
+// diferencia, en caso contrario, informar el producto y la
+// división del primero respecto al segundo.
 
+export const punto5 =(num1, num2)=>{
+  let primero = parseInt(num1)
+  let segundo = parseInt(num2)
 
-export const punto4 =(nombre, edad)=>{
-  let info = [];
-  let info2;
-  let num = 0;
-  let nombreM;
-  let edadM;
-  for (let i = 0; i < 3; i++) {
-       info2 = {
-          nombre: nombre, 
-          edad: parseInt(edad)
-      }
-      info.push(info2);
+  let result=""
+  let Suma = parseFloat(primero) + parseFloat(segundo)
+  let Resta= parseFloat(primero) - parseFloat(segundo)
+  let Producto = parseFloat(primero) * parseFloat(segundo)
+  let División = parseFloat(primero) / parseFloat(segundo)
+
+  if (num1 > num2) {
+    result = "la suma de estos dos numeros es: " + Suma,". Y la resta de estos dos números es: " + Resta
+  } else {
+    result = "El producto de estos dos numeros es: " + Producto,". " + "Y la división de estos dos números es: " + División
   }
-  info.forEach((p)=>{
-   
-      if (p.edad > num) {
-          nombreM = p.nombre;
-          edadM = p.edad;
-          num = edadM;
-      }
-  })
-  let resultado = `la persona con nmayor edad es ${nombreM} con ${edadM} años.`
-  return resultado;
-  
-
+  return result;
 }
 
 
@@ -35,12 +27,3 @@ export const punto4 =(nombre, edad)=>{
 
 
 
- export const punto3 = (intensidad, resistencia) => {
-  let int = parseInt(intensidad)
-  let resis = parseInt(resistencia)
-  let voltaje = int * resis; 
-
-  return voltaje
-  
-
- }
