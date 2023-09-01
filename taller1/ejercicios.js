@@ -1,29 +1,19 @@
-/* 1. Construir el algoritmo para un programa que ingrese tres
-notas de un alumno, si el promedio es menor o igual a 3.9
-mostrar un mensaje "Estudie“, de lo contrario un mensaje que
-diga "becado"
- */
+// 2. Dado un número indicar si es par o impar y si es mayor de 10.
+ export const punto2 = (numero) => {
+  let number = parseInt(numero)
+  let resultado = ""
+  if (number % 2 === 0) {
+    resultado = "El número es par";
+  } else {
+    resultado = "El número es impar";
+  }
 
-export const punto1 = (nota1, nota2, nota3) => {
-    let suma = parseInt(nota1) + parseInt(nota2) + parseInt(nota3);
-  
-    if (suma <= 3.9) {
-      return `Estudié, el resultado de la suma es: ${suma}, sacó menos de 3.9`;
-    } else {
-      return `Becado, el resultado de la suma es: ${suma}, sacó más de 3.9`;
-    }
-  };
-  
+  if (number > 10) {
+    resultado += " y mayor que 10";
+  } else {
+    resultado += " y menor o igual a 10";
+  }
 
-/* export  const punto1 = (nota1, nota2, nota3) =>{
+  return resultado;
 
- let suma = 0;
-let notas = [];
-for (let i = 0; i < 3; i++) {
-     notas = parseFloat(prompt(`Porfavor ingrese sus tres notas`))
-    
-    suma += notas
-}
-return suma <= 3.9 ? alert(`Estudie, el resultado dee la suma es: ${suma}, sacó menos de 3.9`) : alert(`Becado, el resultado dee la suma es: ${suma}, sacó mas de 3.9`)
-
-} */
+ }
